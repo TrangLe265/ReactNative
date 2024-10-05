@@ -18,13 +18,19 @@ export default function App() {
   function handleAdd(){
     const sum = parseFloat(num1) + parseFloat(num2)
     setResult(sum);
-    setHistory([...history, `${num1} - ${num2} = ${sum}`]) ;  
+    setHistory([...history, `${num1} + ${num2} = ${sum}`]) ;  
+    setNum1(0); 
+    setNum2(0); 
+    setResult(0); 
   }
 
   function handleMinus(){
     const subtract = parseFloat(num1) - parseFloat(num2)
     setResult(subtract);
     setHistory([...history, `${num1} - ${num2} = ${subtract}`]) ;
+    setNum1(0); 
+    setNum2(0); 
+    setResult(0); 
   }
 
   return (
@@ -64,6 +70,8 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 20,
     fontStyle: 'Poppin', 
+    marginBottom: 10,
+
   }, 
   input: {
     height: 40,
